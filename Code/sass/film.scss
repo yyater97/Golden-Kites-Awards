@@ -1,0 +1,365 @@
+body{
+    background-color: white;
+    .nav{
+        position: relative;
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+        -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+        -moz-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+        background-color: white;
+        .container{
+            .right-block{
+                ul{
+                    li{
+                        a{
+                            color: black;
+                        }
+                        
+                    }
+    
+                    .active{
+                        background-color: black;
+                        a{
+                            color: #E88E20;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .clear{
+        clear: both;
+    }
+
+    .fixNav{
+        position: fixed;
+    }
+
+    .title{
+        text-align: center;
+    }
+
+    .name{
+        font-size: 22px;
+        text-align: center;
+        font-weight: bold;
+        margin: 5% 0 6%;
+    }
+
+    .film-info{
+        border-bottom: 1px solid #f1f1f1;
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+        -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+        -moz-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+        background-color: white;
+        padding: 20px 0;
+        
+        .extra-info{
+            .some-info{
+                margin-top: 4%;
+                p{
+                    margin-bottom: 2px;
+                }
+            }
+        }
+
+        .main-info{
+            .content{
+                .name{
+                    font-size: 33px;
+                    text-align: center;
+                    font-weight: bold;
+                    margin: 2% 0 4%;
+                }
+            }
+        }
+    }
+
+    @mixin sacleFilmPanel {
+        transform: scale(1.02); 
+        box-shadow: 0px 0px 10px #777;
+        -moz-box-shadow:0px 0px 10px #777;
+        -webkit-box-shadow: 0px 0px 10px #777;
+    }
+
+    #picture-in-film{
+        padding-bottom: 3%;
+        #some-img{
+            .swiper-slide{
+                .row{
+                    height: 50%;
+                    padding: 0;
+                    .img-container{
+                        padding: 5px;
+                        height: 100%;
+                        .screen-img{
+                            border-radius: 10px;
+                            transition: all 0.25s ease-in-out;
+                            img{
+                                border-radius: 10px;
+                            }
+                            &:hover{
+                                @include sacleFilmPanel;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .swiper-button-next, .swiper-button-prev{
+                width: 27px;
+                height: 30px;
+                z-index: 10;
+                top: 51%;
+                &:after{
+                    position: absolute;
+                    top: -25%;
+                    left: -26%;
+                    background-color: black;
+                    height: 150%;
+                    width: 163%;
+                    content: '';
+                    z-index: -1;
+                    opacity: 0.25;
+                    border-radius: 50%;
+                    box-shadow: 0px 0px 10px #777;
+                    -moz-box-shadow:0px 0px 10px #777;
+                    -webkit-box-shadow: 0px 0px 10px #777;
+                }
+            }
+
+            .swiper-button-prev{
+                left: 25px;
+            }
+
+            .swiper-button-next{
+                right: 25px;
+            }
+        }
+    }
+
+    #award-achieved{
+        background-color: black;
+        padding: 1% 0 2%;
+
+        .title{
+            color: #E88E20;
+        }
+
+        .swiper-wrapper{
+            height: 70%;
+        }
+
+        .award{
+            margin: 0 2%;
+            border-radius: 10px;
+            background-color: white;
+            padding: 0 0 2%;
+            box-shadow: 0px 0px 10px #777;
+            -moz-box-shadow:0px 0px 10px #777;
+            -webkit-box-shadow: 0px 0px 10px #777;
+            .award-img{
+                height: 48%;
+                img{
+                    border-radius: 10px 10px 0 0; 
+                }
+            }
+
+            .award-content{ 
+                .text{
+                    padding: 0 3%;
+                }
+            }
+        }
+    }
+
+    .comments{
+        background-color: white;
+        padding-bottom: 2%;
+        .comments-content{
+            .comment-container, .comment-maker{
+                position: relative;
+                padding: 2% 0 1%;
+                .fa-close{
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    background-color: white;
+                    text-align: center;
+                    line-height: 25px;
+                    border-radius: 20px;
+                    margin: 0.5%;
+                    top: 4px;
+                    right: -1px;
+                    z-index: 10;
+                    box-shadow: 0px 0px 10px #777;
+                    -moz-box-shadow:0px 0px 10px #777;
+                    -webkit-box-shadow: 0px 0px 10px #777;
+                }
+
+                .user{
+                    background-color: white;
+                    border-radius: 10px;
+                    height: 100%;
+                    .avatar{
+                        height: 62%;
+                    }
+                    .name{
+                        font-size: 20px;
+                        text-align: left;
+                    }
+                    .user-info{
+                        padding: 0 11px;
+                    }
+                }
+
+                .comment{
+                    padding: 1% 0;
+                    margin: 0 1.5%;
+                    border-radius: 10px;
+                    height: 280px;
+                    box-shadow: 0px 0px 10px #777;
+                    -moz-box-shadow:0px 0px 10px #777;
+                    -webkit-box-shadow: 0px 0px 10px #777;
+                    border-radius: 10px;
+
+                    .block{
+                        padding: 0 5px;
+                    }
+                    
+                    .comment-vote{
+                        background-color: white;
+                        border-radius: 10px;
+                        .like-btn, .dislike-btn{
+                            text-align: center;
+                            width: 100%;
+                            font-size: 30px;
+                        }
+                        .number-like{
+                            width: 60px;
+                            height: 60px;
+                            background-color: white;
+                            font-size: 28px;
+                            border-radius: 60px;
+                            text-align: center;
+                            line-height: 63px;
+                            margin: 12% auto;
+                            font-weight: bold;
+                        } 
+                    }
+    
+                    .comment-content{
+                        background-color: white;
+                        border-radius: 10px;
+                        height: 100%;
+                        padding: 1% 2%;
+                        .top-block{
+                            height: 10%;
+                        }
+                        .mid-block{
+                            height: 70%;
+                        }
+                        .bottom-block{
+                            height: 20%;
+                            .block{
+                                position: relative;
+                                height: 100%;
+                            }
+
+                            .amount-of-response{
+                                padding-left: 0;
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+
+                            .see-response-btn{
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                right: 1%;
+                                padding: 5px 20px;
+                                font-size: 14px;
+                                width: 37%;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .comment-maker{
+                height: 280px;
+                margin: 0 1.5%;
+                .block{
+                    padding: 0 5px;
+                }
+
+                .comment-area{
+                    resize: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding: 2%;
+                    font-size: 17px;
+                    border-radius: 10px;
+                }
+
+                .comment-btn{
+                    margin-top: 2%;
+                    float: right;
+                }
+            }
+        }
+    }
+
+    #other-films{
+        overflow: hidden;
+        background-color: black;
+        .title{
+            color: #E88E20;
+        }
+        .swiper-container{
+            .swiper-wrapper{
+                height: 50%;
+                .swiper-slide{
+                    height: 90%; 
+                    .info-content{
+                        overflow: hidden;
+                        margin: 0 2%;
+                        padding: 0;
+                        background-color: white;
+                        box-shadow: 0px 0px 10px #777;
+                        -moz-box-shadow:0px 0px 10px #777;
+                        -webkit-box-shadow: 0px 0px 10px #777;
+                        border-radius: 10px;
+                        .avatar{
+                            height: 80%;
+                            img{
+                                border-radius: 10px 10px 0 0;
+                            }
+                        }
+                        .name{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #img-popup{
+        height: 100%;
+        width: 100%;
+        top: 0 !important;
+        .popup-container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 2%;
+            width: 75%;
+            height: 75%;
+        }
+    }
+}

@@ -1,0 +1,152 @@
+<html>
+<link rel="stylesheet" href="lib/swiper-4.4.2/dist/css/swiper.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="lib/footer.css"/>
+<link rel="stylesheet" href="css/main.css"/>
+<link rel="stylesheet" href="css/signup.css"/>
+<title>Signup Page</title>
+<body>
+    <section class="nav">
+        <div class="container">
+            <div class="logo">
+                <img src="img/nav-logo-1.png">
+            </div>
+            <div class="right-block">
+                <ul>
+                    <li class="active"><a href="#">TRANG CHỦ</a></li>
+                    <li><a href="#">LỊCH SỬ</a></li>
+                    <li><a href="#">BẢNG XẾP HẠNG</a></li>
+                    <li><a href="#">LIÊN HỆ</a></li>
+                </ul>
+                <div class="user-avatar">
+                    <img src="img/user-black.png">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </section>
+    <section id="signup">
+        <div class="signup-content row">
+            <h3 class="title">Đăng ký tài khoản</h3>
+            <div class="left-form col-md-4">
+                <div class="signup-banner">
+                    <img src="img/signup_banner.jpg">
+                </div>
+            </div>
+            <form class="row col-md-8">
+                <div class="right-form">
+                    <div class="pick-avatar">
+                        <img id="frame" ondrop="drop(event)" ondragover="allowDrop(event)"></img>
+                        <input class="choose-img" type="file" value="CHỌN ẢNH TỪ MÁY">
+                    </div>
+                    <div class="attr-element">
+                        <label>Họ tên:</label>
+                        <input type="text" name="email" placeholder="Nhập họ tên của bạn">
+                    </div>
+                    <div class="attr-element">
+                        <label>Ngày tháng năm sinh:</label>
+                        <div class='input-group date' id='datetimepicker1'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="attr-element">
+                        <label>Địa chỉ email:</label>
+                        <input type="email" name="email" placeholder="Nhập địa chỉ email">
+                    </div>
+                    <div class="attr-element">
+                        <label>Số điện thoại:</label>
+                        <input type="text" name="phonenumber" placeholder="Nhập số điện thoại">
+                    </div>
+                    <div class="attr-element">
+                        <label>Địa chỉ facebook (nếu có):</label>
+                        <input type="text" name="facebook" placeholder="Nhập địa chỉ facebook">
+                    </div>
+                    <div class="considtion-readed">
+                        <label class="container">Tôi đã đọc và đồng ý với các <a id="condition" href="">Điều kiện &amp; điều khoản</a>
+                            <input type="checkbox" checked="true">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="btn-group row">
+                        <div class="col-md-6">
+                            <a><div class="btn signup-btn">ĐĂNG KÝ</div></a>
+                        </div>
+                        <div class="col-md-6">
+                            <a><div class="btn cancel-btn">HỦY</div></a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- footer -->
+	<footer class="footer-distributed">
+        <div class="footer-left">
+            <div class="footer-logo" >
+                <img src="img/footer-logo.png" alt="">
+            </div>
+            <p class="footer-links">
+                <a href="#">Trang Chủ</a>
+                ·
+                <a href="#">Lịch sử</a>
+                ·
+                <a href="#">Bảng xếp hạng</a>
+                ·
+                <a href="#">Liên hệ</a>
+            </p>
+            <p class="footer-company-name">Nhóm con chim non &copy; 2018</p>
+        </div>
+        <div class="footer-center">
+            <h4>Các thông tin liên quan:</h4>
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Khu phố 6, phường Linh Trung</span>Quận Thủ Đức, Tp.Hồ Chí Minh</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>(08) 37251993</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:DHCNTT_TPHCM@gm.uit.com.vn">DHCNTT_TPHCM@gm.uit.com.vn</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <h4>Thông tin về nhóm:</h4>
+                <p class="group-member">Nhóm bao gồm 4 thành viên:</p>
+                <p class="group-member">15520801: Dương Văn Thanh</p>
+                <p class="group-member">15520680: Phạm Ngọc Quân</p>
+                <p class="group-member">15520693: Trần Hưng Quang</p>
+                <p class="group-member">15520679: Nguyễn Trung Quân</p>
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+    <div id="condition-popup">
+        <div class="popup-container">
+            <a href=""><i class="bClose fa fa-close"></i></a>
+            <div class="content">
+                <div class="title">Điều kiện &amp; điều khoản</div>
+                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quibusdam repudiandae, distinctio aliquam fuga optio incidunt dignissimos natus amet porro!</div>
+                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid exercitationem minus cumque veritatis nisi, error suscipit in qui neque architecto eveniet, corrupti doloribus, cum aspernatur similique. Facilis nisi tempora omnis ut esse quam, praesentium ratione iure eaque excepturi aperiam doloribus voluptatem suscipit laborum consequatur accusantium a, quasi, earum illum incidunt eum reprehenderit voluptas. Voluptatum, architecto tempora? Ab atque modi doloremque dignissimos fuga, explicabo eos alias? Laboriosam officiis et mollitia aspernatur ad voluptatum. Aut, molestias. Sunt alias amet deserunt vel impedit, voluptatibus aliquam animi, dolor necessitatibus repellat cum similique. Expedita maiores aut voluptate ad harum eligendi molestiae quasi et laudantium nam?</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/swiper-4.4.2/dist/js/swiper.min.js"></script>
+<script type="text/javascript" src="lib/jquery.bpopup.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="js/signup.js"></script>
+</html>

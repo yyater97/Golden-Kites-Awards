@@ -1,0 +1,161 @@
+body{
+    background-color: #f1f1f1;
+    .nav{
+        position: relative;
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+        -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+        -moz-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+        background-color: white;
+        .container{
+            .right-block{
+                ul{
+                    li{
+                        a{
+                            color: black;
+                        }
+                        
+                    }
+    
+                    .active{
+                        background-color: black;
+                        a{
+                            color: #E88E20;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #news{
+        margin: 4% 2% 1%;
+        .new-content{
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #777;
+            -moz-box-shadow:0px 0px 10px #777;
+            -webkit-box-shadow: 0px 0px 10px #777;
+            background-color: white;
+            padding: 0;
+            margin-bottom: 4%;
+            .new-img{
+                height: 350px;
+                img{
+                    border-radius: 10px 10px 0 0;
+                }
+            }
+            .new-line{
+                text-align: left;
+                border: 2px solid black;
+                margin: 0;
+            }
+            .content{
+                padding: 0 15px;
+                .contact{
+                    display: inline-block;
+                    width: 10%;
+                    vertical-align: top;
+                    text-align: center;
+                    padding-top: 4%;
+                    .post-date{
+                        p{
+                            font-weight: bold;
+                            line-height: 0.75;
+                            font-size: 17px;
+                        }
+                    }
+
+                    .share{
+                        margin-top: 30px;
+                        i{
+                            padding: 12px 0;
+                            font-size: 20px;
+                            display: block;
+                            margin: 0 auto 9%;
+                            width: 55%;
+                            border-radius: 10px;
+                            color: white;
+                        }
+
+                        .fa-facebook{
+                            background-color: #4267b2;
+                        }
+
+                        .fa-twitter{
+                            background-color: #1da1f2;
+                        }
+
+                        .fa-google-plus{
+                            background-color: #db4437;
+                        }
+                    }
+                }
+                .text{
+                    display: inline-block;
+                    width: 89%;
+                    vertical-align: top;
+                    padding: 0 3% 2%;
+                    overflow: hidden;
+                    hr{
+                        width: 20%;
+                        text-align: left;
+                        border: 2px solid black;
+                        margin-left: 0;
+                    }
+
+                    .title{
+
+                    }
+
+                    .author{
+
+                    }
+
+                    .main-text{
+
+                    }
+                }
+            }
+        }
+
+        .news-related{
+            .news-related-title{
+                margin: 0 0 5%;
+                font-size: 22px;
+            }
+
+            .new-tag{
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px #777;
+                -moz-box-shadow:0px 0px 10px #777;
+                -webkit-box-shadow: 0px 0px 10px #777;
+                background-color: white;
+                height: 180px;
+                margin-bottom: 5%;
+                .new-tag-img{
+                    display: inline-block;
+                    height: 100%;
+                    padding: 0;
+                    img{
+                        border-radius: 10px 0 0 10px;
+                    }
+                }
+                .new-tag-content{
+                    display: inline-block;
+                    .new-tag-title{
+                        font-size: 15px;
+                    }
+                    .sumary{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        .news-related-fix{
+            position: fixed;
+            right: 0.7%;
+            top: 10px;
+            padding-right: 32px;
+        }
+    }
+}
