@@ -1,23 +1,33 @@
 $(document).ready(function () {
-    var others_actor = new Swiper('#other-actors .swiper-container',{
+
+    var rank_swiper = new Swiper('#rank-list .swiper-container',{
         speed: 500,
-        slidesPerView: 3.25,
+        slidesPerView: 1,
         centeredSlides: false,
-        spaceBetween: 20,
-        lazy: true,
         autoplay: {
-            delay: 4000,
+            delay: 5000,
             disableOnInteraction: false,
         },
     });
-
-    var award_achieved = new Swiper('#award-achieved .swiper-container',{
+    
+    var film_of_week_swiper = new Swiper('#film-of-week .content',{
         speed: 500,
         slidesPerView: 3,
         centeredSlides: false,
-        pagination:{
+        pagination: {
             el: '.swiper-pagination',
+            clickable: true,
         },
+    });
+
+    var film_of_week_img_swiper = new Swiper('#film-of-week .image-swiper',{
+        speed: 500,
+        slidesPerView: 1,
+        centeredSlides: false,
+        autoplay: {
+            deplay: 2000,
+            disableOnInteraction: false,
+        }
     });
 
     function checkNavPos(){
@@ -34,5 +44,5 @@ $(document).ready(function () {
     $(window).scroll(function(){
         checkNavPos();
     });
-
 });
+

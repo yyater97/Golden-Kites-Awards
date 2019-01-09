@@ -202,6 +202,16 @@ body .btn:hover {
   background-color: black;
   animation: changeColorBtn1 1s; }
 
+body .w-btn {
+  border-color: white;
+  color: white; }
+
+body .w-btn:hover {
+  border-color: #E88E20;
+  color: #E88E20;
+  background-color: white;
+  animation: changeColorBtn2 1s; }
+
 body #kv .banner {
   position: relative; }
 

@@ -218,6 +218,17 @@ body{
         }
     }
 
+    .w-btn{
+        border-color: white;
+        color: white;
+        &:hover{
+            border-color: #E88E20;
+            color: #E88E20;
+            background-color: white;
+            animation: changeColorBtn2 1s;
+        }
+    }
+
     #kv{
         .banner{
             position: relative;

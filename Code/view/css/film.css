@@ -38,7 +38,8 @@ body .film-info {
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
   background-color: white;
-  padding: 20px 0; }
+  padding: 20px 0;
+  position: relative; }
 
 body .film-info .extra-info .some-info {
   margin-top: 4%; }
@@ -46,11 +47,35 @@ body .film-info .extra-info .some-info {
 body .film-info .extra-info .some-info p {
   margin-bottom: 2px; }
 
+body .film-info .main-info .content {
+  height: 64%;
+  overflow: auto; }
+
 body .film-info .main-info .content .name {
   font-size: 33px;
   text-align: center;
   font-weight: bold;
-  margin: 2% 0 4%; }
+  margin: 2% 0 4%;
+  color: #E88E20; }
+
+body .film-info .a-more-btn {
+  overflow: hidden; }
+
+body .film-info .more-btn {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 25px;
+  background-color: white;
+  color: #E88E20;
+  position: absolute;
+  bottom: -25px;
+  right: 60px;
+  text-align: center;
+  box-shadow: 0px 0px 10px #777;
+  -moz-box-shadow: 0px 0px 10px #777;
+  -webkit-box-shadow: 0px 0px 10px #777;
+  border-radius: 50px; }
 
 body #picture-in-film {
   padding-bottom: 3%; }
@@ -293,7 +318,8 @@ body #other-films .swiper-container .swiper-wrapper .swiper-slide .info-content 
 body #img-popup {
   height: 100%;
   width: 100%;
-  top: 0 !important; }
+  top: 0 !important;
+  display: none; }
 
 body #img-popup .popup-container {
   position: absolute;
@@ -301,5 +327,49 @@ body #img-popup .popup-container {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 2%;
-  width: 75%;
-  height: 75%; }
+  width: 70%;
+  height: 80%; }
+
+body #img-popup .popup-container .popup-content {
+  padding: 6px;
+  background: white;
+  border-radius: 10px; }
+
+body #img-popup .popup-container .close-popup-btn {
+  width: 30px;
+  height: 30px;
+  line-height: 29px;
+  text-align: center;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  z-index: 999;
+  border-radius: 30px;
+  background-color: white;
+  font-size: 16px;
+  animation: rotate180back 1s;
+  -webkit-animation: rotate180back 1s;
+  -moz-animation: rotate180back 1s;
+  -ms-animation: rotate180back 1s; }
+
+body #img-popup .popup-container .close-popup-btn:hover {
+  opacity: 1;
+  animation: rotate180 1s;
+  -webkit-animation: rotate180 1s;
+  -moz-animation: rotate180 1s;
+  -ms-animation: rotate180 1s; }
+
+body #img-popup .popup-container img {
+  border-radius: 10px; }
+
+@keyframes rotate180 {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(180deg); } }
+
+@keyframes rotate180back {
+  0% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(0deg); } }

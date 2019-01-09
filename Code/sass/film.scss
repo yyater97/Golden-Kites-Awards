@@ -13,7 +13,6 @@ body{
                         a{
                             color: black;
                         }
-                        
                     }
     
                     .active{
@@ -53,6 +52,7 @@ body{
         -moz-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
         background-color: white;
         padding: 20px 0;
+        position: relative;
         
         .extra-info{
             .some-info{
@@ -65,14 +65,40 @@ body{
 
         .main-info{
             .content{
+                height: 64%;
+                overflow: auto;
                 .name{
                     font-size: 33px;
                     text-align: center;
                     font-weight: bold;
                     margin: 2% 0 4%;
+                    color: #E88E20;
                 }
             }
         }
+
+
+        .a-more-btn{
+            overflow: hidden;
+        }
+
+        .more-btn{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 25px;
+            background-color: white;
+            color: #E88E20;
+            position: absolute;
+            bottom: -25px;
+            right: 60px;
+            text-align: center;
+            box-shadow: 0px 0px 10px #777;
+            -moz-box-shadow:0px 0px 10px #777;
+            -webkit-box-shadow: 0px 0px 10px #777;
+            border-radius: 50px; 
+        }
+
     }
 
     @mixin sacleFilmPanel {
@@ -352,14 +378,57 @@ body{
         height: 100%;
         width: 100%;
         top: 0 !important;
+        display: none;
         .popup-container{
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
             padding: 2%;
-            width: 75%;
-            height: 75%;
+            width: 70%;
+            height: 80%;
+            .popup-content{
+                padding: 6px;
+                background: white;
+                border-radius: 10px;
+            }
+            .close-popup-btn{
+                width: 30px;
+                height: 30px;
+                line-height: 29px;
+                text-align: center;
+                position: absolute;
+                top: 12px;
+                right: 15px;
+                z-index: 999; 
+                border-radius: 30px;
+                background-color: white;
+                font-size: 16px;
+                animation: rotate180back 1s;
+                -webkit-animation: rotate180back 1s;
+                -moz-animation: rotate180back 1s;
+                -ms-animation: rotate180back 1s;
+                &:hover{
+                    opacity: 1;
+                    animation: rotate180 1s;
+                    -webkit-animation: rotate180 1s;
+                    -moz-animation: rotate180 1s;
+                    -ms-animation: rotate180 1s;
+                }
+            }
+            img{
+                border-radius: 10px;
+            }
         }
+    }
+
+    @keyframes rotate180 {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(180deg); }
+    }
+
+    @keyframes rotate180back {
+        0% { transform: rotate(180deg); }
+        100% { transform: rotate(0deg); }
     }
 }
