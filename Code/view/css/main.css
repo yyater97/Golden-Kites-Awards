@@ -21,6 +21,18 @@ body {
   from {
     opacity: 0; } }
 
+@keyframes rotate180 {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(180deg); } }
+
+@keyframes rotate180back {
+  0% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(0deg); } }
+
 body .show {
   display: block; }
 
@@ -35,7 +47,8 @@ body img {
   height: 100%; }
 
 body a {
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
 body a:hover {
   text-decoration: none; }
@@ -118,6 +131,9 @@ body .nav .container .right-block ul li a {
   color: white;
   font-weight: bold;
   text-decoration: none; }
+
+body .nav .container .right-block ul .active a {
+  color: #E88E20; }
 
 body .nav .container .right-block .user-avatar {
   width: 50px;
@@ -242,7 +258,8 @@ body #kv .banner .info-content .black-background {
   height: 100%;
   background-color: black;
   z-index: 1;
-  opacity: 0.5; }
+  opacity: 0.5;
+  border-radius: 10px; }
 
 body #kv .banner .info-content .title, body #kv .banner .info-content .text, body #kv .banner .info-content .btn {
   position: relative;
@@ -705,7 +722,9 @@ body #login-popup {
   background-color: transparent;
   padding: 1%;
   border-radius: 10px;
-  position: relative; }
+  position: relative;
+  width: 45%;
+  display: none; }
 
 body #login-popup .fa-close {
   position: absolute;
@@ -723,8 +742,18 @@ body #login-popup .fa-close {
   right: -3px;
   z-index: 10; }
 
-body #login-popup .fa-close:hover {
-  opacity: 0.9; }
+body #login-popup .close-login-popup {
+  animation: rotate180back 1s;
+  -webkit-animation: rotate180back 1s;
+  -moz-animation: rotate180back 1s;
+  -ms-animation: rotate180back 1s; }
+
+body #login-popup .close-login-popup:hover {
+  opacity: 1;
+  animation: rotate180 1s;
+  -webkit-animation: rotate180 1s;
+  -moz-animation: rotate180 1s;
+  -ms-animation: rotate180 1s; }
 
 body #login-popup .popup-content {
   padding: 2%;
@@ -852,40 +881,3 @@ body #login-popup .btn-grp .item-group a p {
   display: inline-block;
   padding-left: 10px;
   padding-right: 25px; }
-
-body #user-popup {
-  position: fixed;
-  z-index: 999;
-  top: 17.5% !important;
-  transform: translate(-50%, -50%);
-  right: -7% !important;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px #777;
-  -moz-box-shadow: 0px 0px 10px #777;
-  -webkit-box-shadow: 0px 0px 10px #777;
-  display: none; }
-
-body #user-popup .login, body #user-popup .signup {
-  padding: 22px 25px;
-  font-weight: bold; }
-
-body #user-popup .arrow-up {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  overflow: hidden;
-  top: -46%;
-  left: 73%;
-  box-shadow: 0 16px 0px -17px rgba(0, 0, 0, 0.5); }
-
-body #user-popup .arrow-up:after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: white;
-  transform: rotate(45deg);
-  top: 30px;
-  left: 10px;
-  box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5); }

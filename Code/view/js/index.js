@@ -8,6 +8,7 @@ $(document).ready(function () {
         loop: true,
         pagination:{
             el: '.swiper-pagination',
+            clickable: true,
         },
         navigation:{
             nextEl: '.swiper-button-next',
@@ -18,7 +19,8 @@ $(document).ready(function () {
                 $('.swiper-slide .banner .info-content').removeClass('animation');
                 $('.swiper-slide-active .banner .info-content').addClass('animation');
             }
-        }
+        },
+
     });
 
     // var menu = ['img/cbsg-logo.png','img/ec18-logo.png','img/tnoa-logo.png','img/lydvs-logo.png'];
@@ -65,6 +67,7 @@ $(document).ready(function () {
         centeredSlides: false,
         pagination:{
             el: '.swiper-pagination',
+            clickable: true,
         },
     });
 
@@ -89,18 +92,16 @@ $(document).ready(function () {
         checkNavPos();
     });
 
-    $('#login-popup').bPopup({
-        modalClose: true,
-        opacity: 0.6,
-        positionStyle: 'fixed' //'fixed' or 'absolute'
-    });
-
     $('.user-avatar').on('click',function(){
-        $('#user-popup').toggleClass('show');
+        showLoginPopup();
     });
 
-    $('#user-popup .login').on('click',function(){
-        $('body').css('overflow','hidden');
-    });
-
+    function showLoginPopup(){
+        $('#login-popup').bPopup({
+            modalClose: true,
+            opacity: 0.6,
+            positionStyle: 'fixed',
+            closeClass: 'close-login-popup',
+        });
+    }
 });

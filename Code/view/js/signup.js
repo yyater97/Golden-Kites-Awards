@@ -12,8 +12,23 @@ $(document).ready(function () {
         fr.readAsDataURL(f);
     });
 
+    function showConditionPopup(){
+        $('#condition-popup').bPopup({
+            modalClose: true,
+            CloseClass: 'close-condition-popup',
+            opacity: 0.6,
+            positionStyle: 'fixed',
+            onOpen: function(){
+                $('body').css('overflow','hidden');
+            },
+            onClose: function(){
+                $('body').css('overflow','auto');
+            }
+        });
+    }
+
     $('#condition').on('click',function(){
-        $("#condition-popup").bPopup();
+        showConditionPopup();
     });
 });
 
@@ -34,11 +49,3 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
 }
-
-var conditionPopup= $('#condition-popup').bPopup({
-    modalClose: true,
-    CloseClass: 'bClose',
-    opacity: 0.6,
-    positionStyle: 'fixed' //'fixed' or 'absolute'
-});
-
