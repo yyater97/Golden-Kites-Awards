@@ -32,19 +32,4 @@ $(document).ready(function () {
         }
     });
 
-    function checkNavPos(){
-        if($(this).scrollTop()>=60){
-            $('.nav').addClass('fixNav');
-        }
-        else{
-            $('.nav').removeClass('fixNav');
-        }
-    }
-    
-    checkNavPos();
-
-    $(window).scroll(function(){
-        checkNavPos();
-    });
-
 });
