@@ -1,21 +1,30 @@
 body {
   background-color: white; }
 
-body .nav {
+body .navbar {
   position: relative;
+  background-color: white;
+  border-bottom: 1px solid #f1f1f1;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-  background-color: white; }
+  top: 0; }
 
-body .nav .container .right-block ul li a {
-  color: black; }
+body .navbar .navbar-nav a {
+  color: black;
+  font-weight: bold; }
 
-body .nav .container .right-block ul .active {
+body .navbar .navbar-nav a:hover {
+  color: #E88E20;
   background-color: black; }
 
-body .nav .container .right-block ul .active a {
-  color: #E88E20; }
+body .navbar .navbar-nav .active a {
+  color: #E88E20;
+  background-color: black; }
+
+body .navbar .navbar-nav .active a:hover {
+  color: #E88E20;
+  background-color: black; }
 
 body .clear {
   clear: both; }
@@ -146,18 +155,15 @@ body .comments .comments-content .comment-container .fa-close, body .comments .c
   text-align: center;
   line-height: 25px;
   border-radius: 20px;
+  margin: 0.5%;
+  top: 4px;
+  right: -1px;
+  z-index: 10;
   box-shadow: 0px 0px 10px #777;
   -moz-box-shadow: 0px 0px 10px #777;
-  -webkit-box-shadow: 0px 0px 10px #777;
-  margin: 0.5%;
-  top: 15px;
-  right: -14px;
-  z-index: 10; }
+  -webkit-box-shadow: 0px 0px 10px #777; }
 
 body .comments .comments-content .comment-container .user, body .comments .comments-content .comment-maker .user {
-  box-shadow: 0px 0px 10px #777;
-  -moz-box-shadow: 0px 0px 10px #777;
-  -webkit-box-shadow: 0px 0px 10px #777;
   background-color: white;
   border-radius: 10px;
   height: 100%; }
@@ -173,18 +179,19 @@ body .comments .comments-content .comment-container .user .user-info, body .comm
   padding: 0 11px; }
 
 body .comments .comments-content .comment-container .comment, body .comments .comments-content .comment-maker .comment {
-  overflow: hidden;
   padding: 1% 0;
+  margin: 0 1.5%;
   border-radius: 10px;
-  height: 280px; }
+  height: 280px;
+  box-shadow: 0px 0px 10px #777;
+  -moz-box-shadow: 0px 0px 10px #777;
+  -webkit-box-shadow: 0px 0px 10px #777;
+  border-radius: 10px; }
 
 body .comments .comments-content .comment-container .comment .block, body .comments .comments-content .comment-maker .comment .block {
   padding: 0 5px; }
 
 body .comments .comments-content .comment-container .comment .comment-vote, body .comments .comments-content .comment-maker .comment .comment-vote {
-  box-shadow: 0px 0px 10px #777;
-  -moz-box-shadow: 0px 0px 10px #777;
-  -webkit-box-shadow: 0px 0px 10px #777;
   background-color: white;
   border-radius: 10px; }
 
@@ -202,15 +209,9 @@ body .comments .comments-content .comment-container .comment .comment-vote .numb
   text-align: center;
   line-height: 63px;
   margin: 12% auto;
-  font-weight: bold;
-  box-shadow: 0px 0px 10px #777;
-  -moz-box-shadow: 0px 0px 10px #777;
-  -webkit-box-shadow: 0px 0px 10px #777; }
+  font-weight: bold; }
 
 body .comments .comments-content .comment-container .comment .comment-content, body .comments .comments-content .comment-maker .comment .comment-content {
-  box-shadow: 0px 0px 10px #777;
-  -moz-box-shadow: 0px 0px 10px #777;
-  -webkit-box-shadow: 0px 0px 10px #777;
   background-color: white;
   border-radius: 10px;
   height: 100%;
@@ -246,7 +247,8 @@ body .comments .comments-content .comment-container .comment .comment-content .b
   margin: 0; }
 
 body .comments .comments-content .comment-maker {
-  height: 280px; }
+  height: 280px;
+  margin: 0 1.5%; }
 
 body .comments .comments-content .comment-maker .block {
   padding: 0 5px; }
@@ -258,10 +260,7 @@ body .comments .comments-content .comment-maker .comment-area {
   height: 100%;
   padding: 2%;
   font-size: 17px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px #777;
-  -moz-box-shadow: 0px 0px 10px #777;
-  -webkit-box-shadow: 0px 0px 10px #777; }
+  border-radius: 10px; }
 
 body .comments .comments-content .comment-maker .comment-btn {
   margin-top: 2%;
@@ -297,4 +296,31 @@ body #other-actors .swiper-container .swiper-wrapper .swiper-slide .info-content
   border-radius: 10px 10px 0 0; }
 
 body #other-actors .swiper-container .swiper-wrapper .swiper-slide .info-content .name {
-  font-size: 20px; }
+  font-size: 20px;
+  color: #E88E20; }
+
+@media (max-width: 768px) {
+  body .actor-info-content {
+    margin-top: 7%; }
+  body .artist .content {
+    padding: 3% 5%; }
+  body #award-achieved .swiper-container {
+    height: 50%;
+    margin-bottom: 9%; }
+  body #award-achieved .swiper-container .swiper-wrapper {
+    height: 100%; }
+  body .comments .comments-content .comment-container {
+    margin-bottom: 5%; }
+  body .comments .comments-content .comment-container .fa-close {
+    top: -4px;
+    right: -8px; }
+  body .comments .comments-content .comment-container .comment {
+    overflow: auto; }
+  body .comments .comments-content .comment-container .comment .comment-content .bottom-block .see-response-btn {
+    padding: 6px 15px;
+    width: 78%; }
+  body .comments .comments-content .comment-maker .user {
+    margin-bottom: 7%; }
+  body .comments .comments-content .comment-maker .comment-btn {
+    margin-top: 6%;
+    margin-bottom: 4%; } }

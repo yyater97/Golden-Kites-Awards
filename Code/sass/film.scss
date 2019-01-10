@@ -1,25 +1,31 @@
 body{
     background-color: white;
-    .nav{
+    
+    .navbar{
         position: relative;
+        background-color: white;
+        border-bottom: 1px solid #f1f1f1;
         box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
         -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
         -moz-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
-        background-color: white;
-        .container{
-            .right-block{
-                ul{
-                    li{
-                        a{
-                            color: black;
-                        }
-                    }
-    
-                    .active{
+        top: 0;
+        .navbar-nav{
+            a{
+                color: black;
+                font-weight: bold;
+                &:hover{
+                    color: #E88E20;
+                    background-color: black;
+                }
+            }
+          
+            .active{
+                a{
+                    color: #E88E20;
+                    background-color: black;
+                    &:hover{
+                        color: #E88E20;
                         background-color: black;
-                        a{
-                            color: #E88E20;
-                        }
                     }
                 }
             }
@@ -398,6 +404,7 @@ body{
                             font-size: 18px;
                             padding: 5% 0 6%;
                             margin: 0;
+                            color: #E88E20;
                         }
                     }
                 }
@@ -449,6 +456,98 @@ body{
             }
             img{
                 border-radius: 10px;
+            }
+        }
+    }
+
+    @media(max-width:768px){
+        .film-info{
+            .main-info{
+                .content{
+                    .name{
+                        margin: 5% 0 4%;
+                    }
+                }
+            }
+
+            .more-btn{
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 23px;
+            }
+        }
+
+        #picture-in-film{
+            padding-top: 3%;
+            #some-img{
+                .swiper-slide{
+                    .row{
+                        .img-container{
+                            height: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .comments{
+            .comments-content{
+                .comment-container{
+                    margin-bottom: 5%;
+                    .fa-close{
+                        top: -4px;
+                        right: -8px;
+                    }
+                    .comment{
+                        overflow: auto;
+                        .comment-content{
+                            .bottom-block{
+                                .see-response-btn{
+                                    padding: 6px 15px;
+                                    width: 78%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .comment-maker{
+                    .user{
+                        margin-bottom: 7%;
+                    }
+
+                    .comment-btn{
+                        margin-top: 6%;
+                        margin-bottom: 4%;
+                    }
+                }
+            }
+        }
+
+        #other-films{
+            .swiper-container{
+                .swiper-wrapper{
+                    .swiper-slide{
+                        .info-content{
+                            .name{
+                                font-size: 16px;
+                            }
+                        } 
+                    } 
+                } 
+            } 
+        }
+        
+        #img-popup{
+            .popup-container{
+                width: 100%;
+                height: 50%;
+                .close-popup-btn{
+                    background-color: transparent;
+                    top: -7px;
+                    font-size: 45px;
+                }
             }
         }
     }

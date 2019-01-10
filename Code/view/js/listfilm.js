@@ -18,6 +18,12 @@ $(document).ready(function () {
             el: '.swiper-pagination',
             clickable: true,
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 1,
+                spaceBetweenSlides: 0
+            }
+        }
     });
 
     var film_of_week_img_swiper = new Swiper('#film-of-week .image-swiper',{
@@ -28,21 +34,6 @@ $(document).ready(function () {
             deplay: 2000,
             disableOnInteraction: false,
         }
-    });
-
-    function checkNavPos(){
-        if($(this).scrollTop()>=60){
-            $('.nav').addClass('fixNav');
-        }
-        else{
-            $('.nav').removeClass('fixNav');
-        }
-    }
-    
-    checkNavPos();
-
-    $(window).scroll(function(){
-        checkNavPos();
     });
 });
 

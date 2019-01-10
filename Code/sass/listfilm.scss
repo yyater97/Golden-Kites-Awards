@@ -1,26 +1,31 @@
 body{
     background-color: white;
-    .nav{
+    
+    .navbar{
         position: relative;
+        background-color: white;
+        border-bottom: 1px solid #f1f1f1;
         box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
         -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
         -moz-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
-        background-color: white;
-        .container{
-            .right-block{
-                ul{
-                    li{
-                        a{
-                            color: black;
-                        }
-                        
-                    }
-    
-                    .active{
+        top: 0;
+        .navbar-nav{
+            a{
+                color: black;
+                font-weight: bold;
+                &:hover{
+                    color: #E88E20;
+                    background-color: black;
+                }
+            }
+          
+            .active{
+                a{
+                    color: #E88E20;
+                    background-color: black;
+                    &:hover{
+                        color: #E88E20;
                         background-color: black;
-                        a{
-                            color: #E88E20;
-                        }
                     }
                 }
             }
@@ -241,5 +246,47 @@ body{
                 }
             }
         }
+    }
+
+    @media(max-width: 768px){
+        .title{
+          font-size: 24px;
+          padding: 0 2%;
+        }
+
+        #rank-list {
+            .rank-list-container{
+                .rank-container{
+                    height: 450px;
+                    table{
+                        min-width: 1200px;
+                    }
+                }
+            } 
+        }
+
+        #film-of-week{
+            .film-of-week-container{
+                .content{
+                    .film-tag{
+                        .top-block {
+                            height: 40%;
+                        }
+
+                        .bottom-block{
+                            .left-pair{
+                                .extra-info-block{
+                                    height: 16%;
+                                }
+
+                                .btn-block{
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    } 
+                } 
+            } 
+        } 
     }
 }

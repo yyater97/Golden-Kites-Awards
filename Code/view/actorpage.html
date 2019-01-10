@@ -1,4 +1,5 @@
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="lib/swiper-4.4.2/dist/css/swiper.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css">
@@ -7,27 +8,31 @@
 <link rel="stylesheet" href="css/actor.css"/>
 <title>Actor Page</title>
 <body>
-    <section class="nav">
-        <div class="container">
-            <div class="logo">
-                <a href="./index.html">
-                    <img src="img/nav-logo-1.png">
-                </a>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="img/nav-logo-1.png">
+            </a>
             </div>
-            <div class="right-block">
-                <ul>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
                     <li><a href="./index.html">TRANG CHỦ</a></li>
                     <li><a href="./historypage.html">LỊCH SỬ</a></li>
-                    <li><a href="./listfilmpage.html">BẢNG XẾP HẠNG</a></li>
+                    <li class="active"><a href="./listfilmpage.html">BẢNG XẾP HẠNG</a></li> 
                     <li><a href="./index.html#contact-us">LIÊN HỆ</a></li>
                 </ul>
-                <div class="user-avatar">
-                    <img src="img/user-black.png">
-                </div>
             </div>
-            <div class="clear"></div>
+            <div class="user-avatar">
+                <a><img src="img/user-black.png"></a>
+            </div>
         </div>
-    </section>
+    </nav>
     <section class="actor-info">
         <div class="container-fluid">
             <div class="actor-avatar col-md-4">
@@ -128,21 +133,21 @@
     <section class="comments">
         <div class="container">
             <div class="comments-content">
-                <h3 class="title">Bình luận về nghệ sĩ</h3>
+                <h3 class="title">Bình luận về tác phẩm</h3>
                 <div class="comment-container">
                     <i class="fa fa-close"></i>
                     <div class="comment">
-                        <div class="col-md-1 block">
+                        <div class="col-md-1 col-xs-4 block">
                             <div class="comment-vote">
                                 <i class="like-btn fa fa-caret-up"></i>
                                 <p class="number-like">5</p>
                                 <i class="dislike-btn fa fa-caret-down"></i>
                             </div>
                         </div>
-                        <div class="col-md-2 block">
+                        <div class="col-md-2 col-xs-8 block">
                             <div class="user">
                                 <div class="avatar">
-                                    <img src="#">
+                                    <img src="./img/nene.jpg">
                                 </div>
                                 <div class="user-info">
                                     <p class="name">Trần Văn A</p>
@@ -151,7 +156,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-9 block">
+                        <div class="col-md-9 col-xs-12 block">
                             <div class="comment-content">
                                 <div class="top-block row">
                                     <p class="date-time-comment">27-Nov-2018 8:41 AM</p>
@@ -162,10 +167,10 @@
                                     </div>
                                 </div>
                                 <div class="bottom-block row">
-                                    <div class="block col-md-6">
+                                    <div class="block col-md-6 col-xs-6">
                                         <p class="amount-of-response">5 phản hồi</p>
                                     </div>
-                                    <div class="block col-md-6">
+                                    <div class="block col-md-6 col-xs-6">
                                             <a><div class="btn see-response-btn">Xem phản hồi</div></a>
                                     </div>
                                 </div>
@@ -176,17 +181,17 @@
                 <div class="comment-container">
                     <i class="fa fa-close"></i>
                     <div class="comment">
-                        <div class="col-md-1 block">
+                        <div class="col-md-1 col-xs-4 block">
                             <div class="comment-vote">
                                 <i class="like-btn fa fa-caret-up"></i>
                                 <p class="number-like">5</p>
                                 <i class="dislike-btn fa fa-caret-down"></i>
                             </div>
                         </div>
-                        <div class="col-md-2 block">
+                        <div class="col-md-2 col-xs-8 block">
                             <div class="user">
                                 <div class="avatar">
-                                    <img src="#">
+                                    <img src="./img/nene.jpg">
                                 </div>
                                 <div class="user-info">
                                     <p class="name">Trần Văn A</p>
@@ -195,7 +200,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-9 block">
+                        <div class="col-md-9 col-xs-12 block">
                             <div class="comment-content">
                                 <div class="top-block row">
                                     <p class="date-time-comment">27-Nov-2018 8:41 AM</p>
@@ -206,10 +211,10 @@
                                     </div>
                                 </div>
                                 <div class="bottom-block row">
-                                    <div class="block col-md-6">
+                                    <div class="block col-md-6 col-xs-6">
                                         <p class="amount-of-response">5 phản hồi</p>
                                     </div>
-                                    <div class="block col-md-6">
+                                    <div class="block col-md-6 col-xs-6">
                                             <a><div class="btn see-response-btn">Xem phản hồi</div></a>
                                     </div>
                                 </div>
@@ -220,17 +225,17 @@
                 <div class="comment-container">
                     <i class="fa fa-close"></i>
                     <div class="comment">
-                        <div class="col-md-1 block">
+                        <div class="col-md-1 col-xs-4 block">
                             <div class="comment-vote">
                                 <i class="like-btn fa fa-caret-up"></i>
                                 <p class="number-like">5</p>
                                 <i class="dislike-btn fa fa-caret-down"></i>
                             </div>
                         </div>
-                        <div class="col-md-2 block">
+                        <div class="col-md-2 col-xs-8 block">
                             <div class="user">
                                 <div class="avatar">
-                                    <img src="#">
+                                    <img src="./img/nene.jpg">
                                 </div>
                                 <div class="user-info">
                                     <p class="name">Trần Văn A</p>
@@ -239,7 +244,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-9 block">
+                        <div class="col-md-9 col-xs-12 block">
                             <div class="comment-content">
                                 <div class="top-block row">
                                     <p class="date-time-comment">27-Nov-2018 8:41 AM</p>
@@ -250,10 +255,10 @@
                                     </div>
                                 </div>
                                 <div class="bottom-block row">
-                                    <div class="block col-md-6">
+                                    <div class="block col-md-6 col-xs-6">
                                         <p class="amount-of-response">5 phản hồi</p>
                                     </div>
-                                    <div class="block col-md-6">
+                                    <div class="block col-md-6 col-xs-6">
                                             <a><div class="btn see-response-btn">Xem phản hồi</div></a>
                                     </div>
                                 </div>
@@ -262,10 +267,10 @@
                     </div>
                 </div>
                 <div class="comment-maker">
-                    <div class="col-md-2 block">
+                    <div class="col-md-2 col-xs-12 block">
                         <div class="user">
                             <div class="avatar">
-                                <img src="#">
+                                <img src="./img/nene.jpg">
                             </div>
                             <div class="user-info">
                                 <p class="name">Trần Văn A</p>
@@ -274,7 +279,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-10 block">
+                    <div class="col-md-10 col-xs-12 block">
                         <textarea class="comment-area"></textarea>
                         <a><div class="btn comment-btn">BÌNH LUẬN</div></a>
                     </div>
@@ -287,49 +292,59 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="info-content swiper-lazy">
-                        <div class="avatar">
-                            <img data-src="img/kmt.jpg" class="swiper-lazy">
+                    <a>
+                        <div class="info-content swiper-lazy">
+                            <div class="avatar">
+                                <img data-src="img/kmt.jpg" class="swiper-lazy">
+                            </div>
+                            <p class="name">KIỀU MINH TUẤN</p>
                         </div>
-                        <p class="name">KIỀU MINH TUẤN</p>
-                    </div>
-                    <div class="swiper-lazy-preloader"></div>
+                        <div class="swiper-lazy-preloader"></div>
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <div class="info-content swiper-lazy">
-                        <div class="avatar">
-                            <img data-src="img/actor/truong-giang.jpg" class="swiper-lazy">
+                    <a>
+                        <div class="info-content swiper-lazy">
+                            <div class="avatar">
+                                <img data-src="img/actor/truong-giang.jpg" class="swiper-lazy">
+                            </div>
+                            <p class="name">TRƯỜNG GIANG</p>
                         </div>
-                        <p class="name">TRƯỜNG GIANG</p>
-                    </div>
-                    <div class="swiper-lazy-preloader"></div>
+                        <div class="swiper-lazy-preloader"></div>
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <div class="info-content swiper-lazy">
-                        <div class="avatar">
-                            <img data-src="img/actor/sam.jpg" class="swiper-lazy">
+                    <a>
+                        <div class="info-content swiper-lazy">
+                            <div class="avatar">
+                                <img data-src="img/actor/sam.jpg" class="swiper-lazy">
+                            </div>
+                            <p class="name">SAM</p>
                         </div>
-                        <p class="name">SAM</p>
-                    </div>
-                    <div class="swiper-lazy-preloader"></div>
+                        <div class="swiper-lazy-preloader"></div>
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <div class="info-content swiper-lazy">
-                        <div class="avatar">
-                            <img data-src="img/actor/ngo-thanh-van.jpg" class="swiper-lazy">
+                    <a>
+                        <div class="info-content swiper-lazy">
+                            <div class="avatar">
+                                <img data-src="img/actor/ngo-thanh-van.jpg" class="swiper-lazy">
+                            </div>
+                            <p class="name">NGÔ THANH VÂN</p>
                         </div>
-                        <p class="name">NGÔ THANH VÂN</p>
-                    </div>
-                    <div class="swiper-lazy-preloader"></div>
+                        <div class="swiper-lazy-preloader"></div>
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <div class="info-content swiper-lazy">
-                        <div class="avatar">
-                            <img data-src="img/actor/ly-hai.jpg" class="swiper-lazy">
+                    <a>
+                        <div class="info-content swiper-lazy">
+                            <div class="avatar">
+                                <img data-src="img/actor/ly-hai.jpg" class="swiper-lazy">
+                            </div>
+                            <p class="name">LÝ HẢI</p>
                         </div>
-                        <p class="name">LÝ HẢI</p>
-                    </div>
-                    <div class="swiper-lazy-preloader"></div>
+                        <div class="swiper-lazy-preloader"></div>
+                    </a>
                 </div>
             </div>
         </div>

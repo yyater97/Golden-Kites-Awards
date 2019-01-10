@@ -15,7 +15,7 @@ $(document).ready(function () {
     function showConditionPopup(){
         $('#condition-popup').bPopup({
             modalClose: true,
-            CloseClass: 'close-condition-popup',
+            closeClass: 'close-condition-popup',
             opacity: 0.6,
             positionStyle: 'fixed',
             onOpen: function(){

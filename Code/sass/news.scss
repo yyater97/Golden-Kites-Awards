@@ -1,26 +1,31 @@
 body{
     background-color: #f1f1f1;
-    .nav{
+    
+    .navbar{
         position: relative;
+        background-color: white;
+        border-bottom: 1px solid #f1f1f1;
         box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
         -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
         -moz-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
-        background-color: white;
-        .container{
-            .right-block{
-                ul{
-                    li{
-                        a{
-                            color: black;
-                        }
-                        
-                    }
-    
-                    .active{
+        top: 0;
+        .navbar-nav{
+            a{
+                color: black;
+                font-weight: bold;
+                &:hover{
+                    color: #E88E20;
+                    background-color: black;
+                }
+            }
+          
+            .active{
+                a{
+                    color: #E88E20;
+                    background-color: black;
+                    &:hover{
+                        color: #E88E20;
                         background-color: black;
-                        a{
-                            color: #E88E20;
-                        }
                     }
                 }
             }
@@ -151,10 +156,12 @@ body{
                         height: 20%;
                         font-weight: bold;
                     }
+
                     .sumary{
                         font-size: 10px;
                         overflow: auto;
                         height: 54%;
+                        color: black;
                     }
                 }
             }
@@ -165,6 +172,55 @@ body{
             right: 0.7%;
             top: 10px;
             padding-right: 32px;
+        }
+    }
+
+    @media(max-width: 768px){
+        #news {
+            .new-content{
+                .new-img{
+                    height: 320px;
+                }
+                .content{
+                    .contact{
+                        .share{
+                            i{
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .text{
+                        .main-text{
+                            img{
+                                height: 35%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .news-related{
+                .new-tag{
+                    height: 50%;
+                    .new-tag-img{
+                        height: 57%;
+                        border-radius: 10px 10px 0 0;
+                        img{
+                            border-radius: 10px 10px 0 0;
+                        }
+                    }
+
+                    .new-tag-content{
+                        .new-tag-title{
+                            height: auto;
+                        }
+                        .sumary{
+                            height: auto;
+                        }
+                    }
+                }
+            }
         }
     }
 }

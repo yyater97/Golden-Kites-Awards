@@ -10,6 +10,12 @@ $(document).ready(function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 1,
+                spaceBetweenSlides: 0
+            }
+        }
     });
     
     var award_achieved = new Swiper('#award-achieved .swiper-container',{
@@ -19,6 +25,12 @@ $(document).ready(function () {
         pagination:{
             el: '.swiper-pagination',
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 1,
+                spaceBetweenSlides: 0
+            }
+        }
     });
 
     var other_films = new Swiper('#other-films .swiper-container',{
@@ -31,19 +43,17 @@ $(document).ready(function () {
             delay: 3000,
             disableOnInteraction: false,
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 1.25,
+                spaceBetweenSlides: 0
+            }
+        }
     });
 
     $('#picture-in-film .screen-img').on('click', function(){
         $('#img-popup .img img').attr('src',$(this).children().attr('src'));
         popup();
-    });
-
-    $('#picture-in-film a').on('click', function(){
-        return false;
-    });
-
-    $('.a-more-btn').on('click', function(){
-        return false;
     });
 
     var isHideFilmInfo = true;

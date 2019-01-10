@@ -1,26 +1,30 @@
 body{
     background-color: #f1f1f1;
-    .nav{
+    .navbar{
         position: relative;
+        background-color: white;
+        border-bottom: 1px solid #f1f1f1;
         box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
         -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
         -moz-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
-        background-color: white;
-        .container{
-            .right-block{
-                ul{
-                    li{
-                        a{
-                            color: black;
-                        }
-                        
-                    }
-    
-                    .active{
+        top: 0;
+        .navbar-nav{
+            a{
+                color: black;
+                font-weight: bold;
+                &:hover{
+                    color: #E88E20;
+                    background-color: black;
+                }
+            }
+          
+            .active{
+                a{
+                    color: #E88E20;
+                    background-color: black;
+                    &:hover{
+                        color: #E88E20;
                         background-color: black;
-                        a{
-                            color: #E88E20;
-                        }
                     }
                 }
             }
@@ -238,6 +242,20 @@ body{
                 z-index: 10;
             }
 
+            .close-condition-popup{
+                animation: rotate180back 1s;
+                -webkit-animation: rotate180back 1s;
+                -moz-animation: rotate180back 1s;
+                -ms-animation: rotate180back 1s;
+                &:hover{
+                    opacity: 1;
+                    animation: rotate180 1s;
+                    -webkit-animation: rotate180 1s;
+                    -moz-animation: rotate180 1s;
+                    -ms-animation: rotate180 1s;
+                }
+            }
+
             .content{
                 background-color: white;
                 padding: 4%;
@@ -247,6 +265,44 @@ body{
                     text-align: center;
                     font-size: 33px;
                     margin-bottom: 2%;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 768px){
+        #signup {
+            .signup-content{
+                .left-form{
+                    .signup-banner{
+                        padding-right: 0;
+                        margin-bottom: 5%;
+                    }
+                }
+
+                form{
+                    .right-form{
+                        .pick-avatar{
+                            #frame{
+                                width: 80%;
+                            }
+
+                            .choose-img{
+                                width: 44.5%;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+
+        #condition-popup{
+            width: 98%;
+            .popup-container{
+                .content{
+                    .title{
+                        font-size: 30px;
+                    }
                 }
             }
         }

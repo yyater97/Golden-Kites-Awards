@@ -1,4 +1,5 @@
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="lib/swiper-4.4.2/dist/css/swiper.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css">
@@ -7,29 +8,31 @@
 <link rel="stylesheet" href="css/main.css"/>
 <title>Home Page</title>
 <body>
-    <section class="nav">
-        <div class="container">
-            <div class="logo">
-                <a href="./index.html">
-                    <img src="img/nav-logo-1.png">
-                </a>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="img/nav-logo-1.png">
+            </a>
             </div>
-            <div class="right-block">
-                <ul>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="./index.html">TRANG CHỦ</a></li>
                     <li><a href="./historypage.html">LỊCH SỬ</a></li>
-                    <li><a href="./listfilmpage.html">BẢNG XẾP HẠNG</a></li>
+                    <li><a href="./listfilmpage.html">BẢNG XẾP HẠNG</a></li> 
                     <li><a href="./index.html#contact-us">LIÊN HỆ</a></li>
                 </ul>
-                <div class="user-avatar">
-                    <a>
-                        <img src="img/user-white.png">
-                    </a>
-                </div>
             </div>
-            <div class="clear"></div>
+            <div class="user-avatar">
+                <a><img src="img/user-white.png"></a>
+            </div>
         </div>
-    </section>
+    </nav>
     <section id="kv">
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -139,7 +142,6 @@
                                     <div class="btn-view-more btn">XEM THÊM</div>
                                 </a>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
@@ -170,9 +172,11 @@
                 Đến giải 2006, Cánh diều bạc được khôi phục và bằng khen thay cho Cánh diều đồng. Năm 2007, Hội Điện ảnh trao tặng thêm Cách diều bạc và hai giải phụ là 
                 Giải phim phục vụ khán giả đông nhất và Giải phim bán được nhiều vé nhất....
             </p>
-            <a href="./historypage.html">
-                <div class="btn-view-more btn">XEM THÊM</div>
-            </a>
+            <div class="row">
+                <a href="./historypage.html">
+                    <div class="btn-view-more btn">XEM THÊM</div>
+                </a>
+            </div>
         </div>
         <div class="history-img">
             <img src="img/histoty-1.png">
@@ -493,9 +497,11 @@
                         <label class="form-row">Nội dung:</label>
                         <textarea class="form-row" id="txtContent-Contact-Us"></textarea>
                     </div>
-                    <a >
-                        <div class="btn btn-view-more">GỬI LỜI NHẮN</div>
-                    </a>
+                    <div class="row row-btn">
+                        <a >
+                            <div class="btn btn-view-more">GỬI LỜI NHẮN</div>
+                        </a>
+                    </div>
                     <blockquote>Xin chân thành cám ơn bạn đã đóng góp ý kiến!</blockquote>
                 </div>
                 <div class="col-md-6">
@@ -625,6 +631,7 @@
     </div>
 </body>
 <script type="text/javascript" src="lib/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="lib/swiper-4.4.2/dist/js/swiper.min.js"></script>
 <script type="text/javascript" src="lib/jquery.bpopup.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>

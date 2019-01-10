@@ -1,30 +1,34 @@
 body{
     background-color: white;
-    .nav{
-        position: relative;
-        box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
-        -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
-        -moz-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
-        background-color: white;
-        .container{
-            .right-block{
-                ul{
-                    li{
-                        a{
-                            color: black;
-                        }
-                        
-                    }
-    
-                    .active{
-                        background-color: black;
-                        a{
-                            color: #E88E20;
-                        }
-                    }
+
+    .navbar{
+      background-color: white;
+      border-bottom: 1px solid #f1f1f1;
+      box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+      -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+      -moz-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+      top: 0;
+      .navbar-nav{
+        a{
+            color: black;
+            font-weight: bold;
+            &:hover{
+                color: #E88E20;
+                background-color: black;
+            }
+        }
+        
+        .active{
+            a{
+                color: #E88E20;
+                background-color: black;
+                &:hover{
+                    color: #E88E20;
+                    background-color: black;
                 }
             }
         }
+      }
     }
 
     .title{
@@ -39,7 +43,7 @@ body{
 
     #document{
         .document-text{
-          padding: 0 10% 2%;
+          padding: 5% 10% 2%;
         }
 
         .document-content{
@@ -446,5 +450,27 @@ body{
                   transform: translateX(0);
         }
       }
-      
+
+    @media(max-width: 768px){
+      .title{
+        font-size: 24px;
+        padding: 0 2%;
+      }
+
+      #document{
+        .document-text{
+          padding-top: 16%;
+        }
+      }
+
+      .swiper-container{
+        height: 40%;
+      }
+
+      .cd-timeline__date {
+        img{
+          height: 35%;
+        }
+      }
+    }
 }

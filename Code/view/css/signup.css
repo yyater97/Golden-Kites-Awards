@@ -2,21 +2,30 @@
 body {
   background-color: #f1f1f1; }
 
-body .nav {
+body .navbar {
   position: relative;
+  background-color: white;
+  border-bottom: 1px solid #f1f1f1;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-  background-color: white; }
+  top: 0; }
 
-body .nav .container .right-block ul li a {
-  color: black; }
+body .navbar .navbar-nav a {
+  color: black;
+  font-weight: bold; }
 
-body .nav .container .right-block ul .active {
+body .navbar .navbar-nav a:hover {
+  color: #E88E20;
   background-color: black; }
 
-body .nav .container .right-block ul .active a {
-  color: #E88E20; }
+body .navbar .navbar-nav .active a {
+  color: #E88E20;
+  background-color: black; }
+
+body .navbar .navbar-nav .active a:hover {
+  color: #E88E20;
+  background-color: black; }
 
 body #signup {
   padding: 1% 3% 5%; }
@@ -209,6 +218,19 @@ body #condition-popup .popup-container .fa-close {
   right: -3px;
   z-index: 10; }
 
+body #condition-popup .popup-container .close-condition-popup {
+  animation: rotate180back 1s;
+  -webkit-animation: rotate180back 1s;
+  -moz-animation: rotate180back 1s;
+  -ms-animation: rotate180back 1s; }
+
+body #condition-popup .popup-container .close-condition-popup:hover {
+  opacity: 1;
+  animation: rotate180 1s;
+  -webkit-animation: rotate180 1s;
+  -moz-animation: rotate180 1s;
+  -ms-animation: rotate180 1s; }
+
 body #condition-popup .popup-container .content {
   background-color: white;
   padding: 4%;
@@ -218,3 +240,16 @@ body #condition-popup .popup-container .content .title {
   text-align: center;
   font-size: 33px;
   margin-bottom: 2%; }
+
+@media (max-width: 768px) {
+  body #signup .signup-content .left-form .signup-banner {
+    padding-right: 0;
+    margin-bottom: 5%; }
+  body #signup .signup-content form .right-form .pick-avatar #frame {
+    width: 80%; }
+  body #signup .signup-content form .right-form .pick-avatar .choose-img {
+    width: 44.5%; }
+  body #condition-popup {
+    width: 98%; }
+  body #condition-popup .popup-container .content .title {
+    font-size: 30px; } }

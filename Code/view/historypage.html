@@ -1,4 +1,5 @@
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="lib/swiper-4.4.2/dist/css/swiper.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css">
@@ -7,29 +8,31 @@
 <link rel="stylesheet" href="css/history.css"/>
 <title>History Page</title>
 <body>
-    <section class="nav">
-        <div class="container">
-            <div class="logo">
-                <a href="./index.html">
-                    <img src="img/nav-logo-1.png">
-                </a>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="img/nav-logo-1.png">
+            </a>
             </div>
-            <div class="right-block">
-                <ul>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
                     <li><a href="./index.html">TRANG CHỦ</a></li>
                     <li class="active"><a href="./historypage.html">LỊCH SỬ</a></li>
-                    <li><a href="./listfilmpage.html">BẢNG XẾP HẠNG</a></li>
+                    <li><a href="./listfilmpage.html">BẢNG XẾP HẠNG</a></li> 
                     <li><a href="./index.html#contact-us">LIÊN HỆ</a></li>
                 </ul>
-                <div class="user-avatar">
-                    <a>
-                        <img src="img/user-black.png">
-                    </a>
-                </div>
             </div>
-            <div class="clear"></div>
+            <div class="user-avatar">
+                <a><img src="img/user-black.png"></a>
+            </div>
         </div>
-    </section>
+    </nav>
     <section id="document">
         <div class="document-text">
             <h3 class="title">LỊCH SỬ GIẢI THƯỞNG CÁNH DIỀU VÀNG</h3>
@@ -307,7 +310,7 @@
     </footer>
 </body>
 <script type="text/javascript" src="lib/jquery.min.js"></script>
-<script type="text/javascript" src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="lib/swiper-4.4.2/dist/js/swiper.min.js"></script>
 <script type="text/javascript" src="lib/jquery.bpopup.min.js"></script>
 <script type="text/javascript" src="js/history.js"></script>

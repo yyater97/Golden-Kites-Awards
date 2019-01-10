@@ -85,57 +85,96 @@ body{
     @include hoverBtn(changeColorBtn3, green, white, green);
     @include hoverBtn(changeColorBtn4, red, white, red);
 
-    .nav{
+    .navbar{
         height: 60px;
         line-height: 60px;
         background-color: transparent;
         position: fixed;
         width: 100%;
-        display: block;
+        border: none;
+        border-radius: 0;
         z-index: 999;
-        .container{
-            width: 100%;
-            height: 100%;
-            .logo{
-                float: left;
-                width: 9.5%;
+
+        .container-fluid{
+            background-color: transparent;
+            .navbar-brand{
+                padding: 0;
+                height: 100%;
+                width: 25.5%;
                 margin-left: 2%;
             }
-            .right-block{
-                float: right;
-                height: 100%;
-                ul{
-                    margin: 0;
-                    padding: 0;
-                    list-style-type: none;
-                    display: inline-block;
-                    vertical-align: top;
-                    li{
-                        display: inline-block;
-                        padding: 0 20px;
-                        margin-right: -5px;
-                        a{
-                            display: block;
-                            color: white;  
-                            font-weight: bold;
-                            text-decoration: none;
-                        }
-                        
-                    }
-                    .active{
-                        a{
-                            color: #E88E20;
-                        } 
+        }
+
+        .navbar-nav{
+            a{
+                color: white;
+                font-weight: bold;
+                &:hover{
+                    color: #E88E20;
+                    background-color: transparent;
+                }
+            }
+            
+            .active{
+                a{
+                    color: #E88E20;
+                    background-color: transparent;
+                    &:hover{
+                        color: #E88E20;
+                        background-color: transparent;
                     }
                 }
-                .user-avatar{
-                    width: 50px;
-                    height: 50px;
-                    vertical-align: middle;
-                    border-radius: 50%;
-                    display: inline-block;
-                    margin: 0 20px;
+            }
+        }
+
+        ul{
+            li{
+                height: 60px;
+                a{
+                    display: block;
+                    width: 100%;
+                    text-decoration: none;
+                    padding: 0px 30px;
+                    height: 100%;
+                    line-height: 60px;
                 }
+            }
+        }
+
+        .user-avatar{
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 1%;
+            a{
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+        }
+        
+        .navbar-collapse{
+            border-top-color: #E88E20;
+            .navbar-right{
+                margin-right: 50px;
+            }
+        }       
+        
+        .navbar-toggle{
+            margin-top: 13px;
+            border-color: #E88E20;
+            background-color: #E88E20;
+            margin-right: 20%;
+            &:focus{
+                border-color: #E88E20;
+                background-color: #E88E20;
+                .icon-bar{
+                    background-color: black;
+                }
+            }
+            .icon-bar{
+                background-color: black;
             }
         }
     }
@@ -146,29 +185,40 @@ body{
         box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
         -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
         -moz-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
-        .container{
-            .right-block{
-                ul{
-                    li{
-                        a{
-                            color: black;
-                            
-                        }
-                        &:hover{
-                            background-color: black;
-                            a{
-                                color: #E88E20;
-                            }
-                        }
-                    }
-                    .active{
+        .navbar-nav{
+            a{
+                color: black;
+                font-weight: bold;
+                &:hover{
+                    color: #E88E20;
+                    background-color: black;
+                }
+            }
+            
+            .active{
+                a{
+                    color: #E88E20;
+                    background-color: black;
+                    &:hover{
+                        color: #E88E20;
                         background-color: black;
-                        a{
-                            color: #E88E20;
-                        } 
                     }
                 }
-            } 
+            }
+        }
+
+        .navbar-collapse{
+            border-top-color: #E88E20;
+            background-color: white;
+            
+        }     
+
+        .user-avatar{
+            a{
+                &:hover{
+                    background-color: transparent;
+                }
+            }
         }
     }
 
@@ -248,6 +298,7 @@ body{
     #kv{
         .banner{
             position: relative;
+            height: 100%;
             @keyframes fadeOutUp{
                 0%{
                     opacity: 0;
@@ -987,6 +1038,195 @@ body{
                         padding-right: 25px;
                     }
                 }
+            }
+        }
+    }
+
+    @media(max-width: 768px){
+        .navbar{            
+            .navbar-collapse{
+                background-color: white;
+                border-bottom: 1px solid #E88E20;
+                padding: 0;
+                .navbar-right{
+                    margin: 0;
+                }
+            }
+
+            .navbar-nav{
+                a{
+                    color: black;
+                    font-weight: bold;
+                    &:hover{
+                        color: #E88E20;
+                        background-color: black;
+                    }
+                }
+                
+                .active{
+                    a{
+                        color: #E88E20;
+                        background-color: black;
+                        &:hover{
+                            color: #E88E20;
+                            background-color: black;
+                        }
+                    }
+                }
+            }
+
+            .user-avatar{
+                height: 80%;
+                width: 14%;
+            }                   
+        }
+
+        .text{
+            font-size: 15px;
+        }
+
+        .title{
+            font-size: 24px;
+        }
+
+        .btn{
+            font-size: 11px;
+            padding: 7px 26px;
+        }
+
+        #kv{
+            .swiper-container{
+                height: 70%;
+
+                .swiper-button-next, .swiper-button-prev{
+                    background-size: 15px 44px;
+                }
+            }
+
+            .banner{
+                .info-content{
+                    width: 75%;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    text-align: center;
+                    padding-right: 0;
+                    .title{
+                        font-size: 21px;
+                    }
+                    .black-background{
+                        top: 2%;
+                        width: 110%;
+                        height: 102%;
+                    }
+                }
+            }
+        }
+
+        #history{
+            margin: 50px 25px;
+            .info-content{
+                text-align: center;
+                width: 100%;
+                .title{
+                    font-size: 27px;
+                }
+
+                .btn{
+                    float: none;
+                }
+            }
+
+            .history-img{
+                width: 100%;
+                margin-top: 10%;
+            }
+        }
+
+        #film-awarded{
+            .title{
+                margin: 5% 0 7%;
+            }
+
+            .panel-controller{
+                .panel-controller-element{
+                    .content{
+                        .award-archieve{
+                            .award-name{
+                                padding-top: 10%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .panel-content{
+                .film{
+                    padding: 3% 5% 2%;
+                    .bottom{
+                        text-align: center;
+                    }
+
+                    .trailer{
+                        padding: 0;
+                        height: 40%;
+                        iframe{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        #contact-us{
+            form{
+                margin: 10px 0px;
+                .row-btn{
+                    text-align: center;
+                }
+            }
+        }
+
+        blockquote {
+            font-size: 15px;
+        }
+
+        #actor-awarded{
+            padding-bottom: 6.5%;
+            .swiper-container {
+                padding-bottom: 9.5%;
+                .swiper-wrapper{
+                    .swiper-slide{
+                        .info-content{
+                            .btn{
+                                float: none;
+                                margin-right: 0;
+                            }
+                            .gr-row-sm{
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-distributed{
+            padding: 20px 45px;
+            .footer-left{
+                .footer-logo{
+                    width: 80%;
+                    height: 35%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        #login-popup{
+            width: 97%;
+            .btn-grp{
+                width: 70%;
             }
         }
     }

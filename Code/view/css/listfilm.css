@@ -1,21 +1,30 @@
 body {
   background-color: white; }
 
-body .nav {
+body .navbar {
   position: relative;
+  background-color: white;
+  border-bottom: 1px solid #f1f1f1;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-  background-color: white; }
+  top: 0; }
 
-body .nav .container .right-block ul li a {
-  color: black; }
+body .navbar .navbar-nav a {
+  color: black;
+  font-weight: bold; }
 
-body .nav .container .right-block ul .active {
+body .navbar .navbar-nav a:hover {
+  color: #E88E20;
   background-color: black; }
 
-body .nav .container .right-block ul .active a {
-  color: #E88E20; }
+body .navbar .navbar-nav .active a {
+  color: #E88E20;
+  background-color: black; }
+
+body .navbar .navbar-nav .active a:hover {
+  color: #E88E20;
+  background-color: black; }
 
 body .title {
   font-size: 32px;
@@ -201,3 +210,18 @@ body #film-of-week .film-of-week-container .swiper-container .swiper-pagination 
   height: 12px;
   width: 12px;
   background-color: #f1f1f1; }
+
+@media (max-width: 768px) {
+  body .title {
+    font-size: 24px;
+    padding: 0 2%; }
+  body #rank-list .rank-list-container .rank-container {
+    height: 450px; }
+  body #rank-list .rank-list-container .rank-container table {
+    min-width: 1200px; }
+  body #film-of-week .film-of-week-container .content .film-tag .top-block {
+    height: 40%; }
+  body #film-of-week .film-of-week-container .content .film-tag .bottom-block .left-pair .extra-info-block {
+    height: 16%; }
+  body #film-of-week .film-of-week-container .content .film-tag .bottom-block .left-pair .btn-block {
+    text-align: center; } }

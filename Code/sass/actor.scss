@@ -1,31 +1,37 @@
 body{
     background-color: white;
-    .nav{
+
+    .navbar{
         position: relative;
+        background-color: white;
+        border-bottom: 1px solid #f1f1f1;
         box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
         -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
         -moz-box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
-        background-color: white;
-        .container{
-            .right-block{
-                ul{
-                    li{
-                        a{
-                            color: black;
-                        }
-                        
-                    }
-    
-                    .active{
+        top: 0;
+        .navbar-nav{
+            a{
+                color: black;
+                font-weight: bold;
+                &:hover{
+                    color: #E88E20;
+                    background-color: black;
+                }
+            }
+          
+            .active{
+                a{
+                    color: #E88E20;
+                    background-color: black;
+                    &:hover{
+                        color: #E88E20;
                         background-color: black;
-                        a{
-                            color: #E88E20;
-                        }
                     }
                 }
             }
         }
     }
+
 
     .clear{
         clear: both;
@@ -174,19 +180,16 @@ body{
                     text-align: center;
                     line-height: 25px;
                     border-radius: 20px;
+                    margin: 0.5%;
+                    top: 4px;
+                    right: -1px;
+                    z-index: 10;
                     box-shadow: 0px 0px 10px #777;
                     -moz-box-shadow:0px 0px 10px #777;
                     -webkit-box-shadow: 0px 0px 10px #777;
-                    margin: 0.5%;
-                    top: 15px;
-                    right: -14px;
-                    z-index: 10;
                 }
 
                 .user{
-                    box-shadow: 0px 0px 10px #777;
-                    -moz-box-shadow:0px 0px 10px #777;
-                    -webkit-box-shadow: 0px 0px 10px #777;
                     background-color: white;
                     border-radius: 10px;
                     height: 100%;
@@ -203,19 +206,20 @@ body{
                 }
 
                 .comment{
-                    overflow: hidden;
                     padding: 1% 0;
+                    margin: 0 1.5%;
                     border-radius: 10px;
                     height: 280px;
+                    box-shadow: 0px 0px 10px #777;
+                    -moz-box-shadow:0px 0px 10px #777;
+                    -webkit-box-shadow: 0px 0px 10px #777;
+                    border-radius: 10px;
 
                     .block{
                         padding: 0 5px;
                     }
                     
                     .comment-vote{
-                        box-shadow: 0px 0px 10px #777;
-                        -moz-box-shadow:0px 0px 10px #777;
-                        -webkit-box-shadow: 0px 0px 10px #777;
                         background-color: white;
                         border-radius: 10px;
                         .like-btn, .dislike-btn{
@@ -233,16 +237,10 @@ body{
                             line-height: 63px;
                             margin: 12% auto;
                             font-weight: bold;
-                            box-shadow: 0px 0px 10px #777;
-                            -moz-box-shadow:0px 0px 10px #777;
-                            -webkit-box-shadow: 0px 0px 10px #777;
                         } 
                     }
     
                     .comment-content{
-                        box-shadow: 0px 0px 10px #777;
-                        -moz-box-shadow:0px 0px 10px #777;
-                        -webkit-box-shadow: 0px 0px 10px #777;
                         background-color: white;
                         border-radius: 10px;
                         height: 100%;
@@ -284,7 +282,7 @@ body{
 
             .comment-maker{
                 height: 280px;
-
+                margin: 0 1.5%;
                 .block{
                     padding: 0 5px;
                 }
@@ -297,9 +295,6 @@ body{
                     padding: 2%;
                     font-size: 17px;
                     border-radius: 10px;
-                    box-shadow: 0px 0px 10px #777;
-                    -moz-box-shadow:0px 0px 10px #777;
-                    -webkit-box-shadow: 0px 0px 10px #777;
                 }
 
                 .comment-btn{
@@ -338,7 +333,64 @@ body{
                         }
                         .name{
                             font-size: 20px;
+                            color: #E88E20;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width: 768px){
+        .actor-info-content{
+            margin-top: 7%;
+        }
+
+        .artist{
+            .content{
+                padding: 3% 5%;
+            }
+        }
+
+        #award-achieved{
+            .swiper-container{
+                height: 50%;
+                margin-bottom: 9%;
+                .swiper-wrapper{
+                    height: 100%;
+                }
+            }
+        }
+
+        .comments{
+            .comments-content{
+                .comment-container{
+                    margin-bottom: 5%;
+                    .fa-close{
+                        top: -4px;
+                        right: -8px;
+                    }
+                    .comment{
+                        overflow: auto;
+                        .comment-content{
+                            .bottom-block{
+                                .see-response-btn{
+                                    padding: 6px 15px;
+                                    width: 78%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .comment-maker{
+                    .user{
+                        margin-bottom: 7%;
+                    }
+
+                    .comment-btn{
+                        margin-top: 6%;
+                        margin-bottom: 4%;
                     }
                 }
             }

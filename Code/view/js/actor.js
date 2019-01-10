@@ -9,6 +9,12 @@ $(document).ready(function () {
             delay: 4000,
             disableOnInteraction: false,
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 1.25,
+                spaceBetweenSlides: 0
+            }
+        }
     });
 
     var award_achieved = new Swiper('#award-achieved .swiper-container',{
@@ -18,6 +24,12 @@ $(document).ready(function () {
         pagination:{
             el: '.swiper-pagination',
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 1,
+                spaceBetweenSlides: 0
+            }
+        }
     });
 
     function checkNavPos(){

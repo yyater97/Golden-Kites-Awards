@@ -1,4 +1,5 @@
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="lib/swiper-4.4.2/dist/css/swiper.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css">
@@ -7,29 +8,31 @@
 <link rel="stylesheet" href="css/news.css"/>
 <title>News Page</title>
 <body>
-    <section class="nav">
-        <div class="container">
-            <div class="logo">
-                <a href="./index.html">
-                    <img src="img/nav-logo-1.png">
-                </a>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="img/nav-logo-1.png">
+            </a>
             </div>
-            <div class="right-block">
-                <ul>
-                    <li><a href="./index.html">TRANG CHỦ</a></li>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="./index.html">TRANG CHỦ</a></li>
                     <li><a href="./historypage.html">LỊCH SỬ</a></li>
-                    <li><a href="./listfilmpage.html">BẢNG XẾP HẠNG</a></li>
+                    <li><a href="./listfilmpage.html">BẢNG XẾP HẠNG</a></li> 
                     <li><a href="./index.html#contact-us">LIÊN HỆ</a></li>
                 </ul>
-                <div class="user-avatar">
-                    <a>
-                        <img src="img/user-black.png">
-                    </a>
-                </div>
             </div>
-            <div class="clear"></div>
+            <div class="user-avatar">
+                <a><img src="img/user-black.png"></a>
+            </div>
         </div>
-    </section>
+    </nav>
     <section id="news">
         <div class="fuil-container row">
             <div class="new-content col-md-8">
@@ -121,46 +124,52 @@
                     </div>
                 </div>
             </div>
-            <div class="news-related col-md-4">
+            <div class="news-related col-md-4 col-xs-12">
                 <h3 class="news-related-title">Các tin liên quan:</h3>
                 <div class="new-tag">
-                    <div class="new-tag-img col-md-5">
-                        <img src="./img/banner2.jpg">
-                    </div>
-                    <div class="new-tag-content col-md-7">
-                        <h3 class="new-tag-title">Cánh diều vàng 2017 đã có chủ</h3>
-                        <p class="sumary">Phim truyện xuất sắc:
-                            <br>
-                            Cánh diều vàng: Sài Gòn anh yêu em
-                            <br>
-                            Cánh diều bạc: 12 chòm sao: Vẽ đường cho yêu chạy và Tấm Cám: Chuyện chưa kể
-                            <br>
-                            Bằng khen: Cha cõng con, Sút và Bao giờ có yêu nhau
-                            <br>
-                            Bằng khen của BGK: Tik Tak anh yêu em
-                            <br>...
-                        </p>
-                    </div>
+                    <a>
+                        <div class="new-tag-img col-md-5 col-xs-12">
+                            <img src="./img/banner2.jpg">
+                        </div>
+                        <div class="new-tag-content col-md-7 col-xs-12">
+                            <h3 class="new-tag-title">Cánh diều vàng 2017 đã có chủ</h3>
+                            <p class="sumary">Phim truyện xuất sắc:
+                                <br>
+                                Cánh diều vàng: Sài Gòn anh yêu em
+                                <br>
+                                Cánh diều bạc: 12 chòm sao: Vẽ đường cho yêu chạy và Tấm Cám: Chuyện chưa kể
+                                <br>
+                                Bằng khen: Cha cõng con, Sút và Bao giờ có yêu nhau
+                                <br>
+                                Bằng khen của BGK: Tik Tak anh yêu em
+                                <br>...
+                            </p>
+                        </div>
+                    </a>
                 </div>
                 <div class="new-tag">
-                    <div class="new-tag-img col-md-5">
-                        <img src="./img/banner4.jpg">
-                    </div>
-                    <div class="new-tag-content col-md-7">
-                        <h3 class="new-tag-title">Trương Ngọc Ánh được sắp xếp trao giải cho Trần Bảo Sơn</h3>
-                        <p class="sumary">Đêm 8/1, tại Nhà hát TP. HCM, giải thưởng “Ngôi sao xanh” đã vinh danh Trần Bảo Sơn cùng nhiều nghệ sỹ khác trong ngành công nghiệp điện ảnh và truyền hình tại Việt Nam. Trương Ngọc Ánh đã xướng tên chồng cũ trong hạng mục danh giá: Nam diễn viên điện ảnh xuất sắc nhất.</p>
-                    </div>
+                    <a>
+                        <div class="new-tag-img col-md-5">
+                            <img src="./img/banner4.jpg">
+                        </div>
+                        <div class="new-tag-content col-md-7">
+                            <h3 class="new-tag-title">Trương Ngọc Ánh được sắp xếp trao giải cho Trần Bảo Sơn</h3>
+                            <p class="sumary">Đêm 8/1, tại Nhà hát TP. HCM, giải thưởng “Ngôi sao xanh” đã vinh danh Trần Bảo Sơn cùng nhiều nghệ sỹ khác trong ngành công nghiệp điện ảnh và truyền hình tại Việt Nam. Trương Ngọc Ánh đã xướng tên chồng cũ trong hạng mục danh giá: Nam diễn viên điện ảnh xuất sắc nhất.</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="new-tag">
-                    <div class="new-tag-img col-md-5">
-                        <img src="./img/banner5.jpg">
-                    </div>
-                    <div class="new-tag-content col-md-7">
-                        <h3 class="new-tag-title">Kim Tuyến bất ngờ nhận giải Cánh diều vàng</h3>
-                        <p class="sumary">Tại Lễ trao giải Cánh diểu vàng 2015 diễn ra tại Hà Nội đêm 20/4,DVDA Kim Tuyến đã bất ngờ nhận được giải thưởng Nữ diễn viên phụ xuất sắc nhật với bộ phim Tuổi Thanh Xuân.
-                            <br>Tham gian trong Lễ trao giải,Kim Tuyến đã chọn chiếc đầm mằ trắng nhẹ nhàng và tinh khiết với kiểu dáng trẻ trung,sang trọng của NTK Chung Thanh Phong.
-                        </p>
-                    </div>
+                    <a>
+                        <div class="new-tag-img col-md-5 col-xs-12">
+                            <img src="./img/banner5.jpg">
+                        </div>
+                        <div class="new-tag-content col-md-7 col-xs-12">
+                            <h3 class="new-tag-title">Kim Tuyến bất ngờ nhận giải Cánh diều vàng</h3>
+                            <p class="sumary">Tại Lễ trao giải Cánh diểu vàng 2015 diễn ra tại Hà Nội đêm 20/4,DVDA Kim Tuyến đã bất ngờ nhận được giải thưởng Nữ diễn viên phụ xuất sắc nhật với bộ phim Tuổi Thanh Xuân.
+                                <br>Tham gian trong Lễ trao giải,Kim Tuyến đã chọn chiếc đầm mằ trắng nhẹ nhàng và tinh khiết với kiểu dáng trẻ trung,sang trọng của NTK Chung Thanh Phong.
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
