@@ -6,7 +6,7 @@ import ListFilm from '../screens/ListFilm';
 import Login from '../screens/Login';
 import News from '../screens/News';
 import Signup from '../screens/Signup';
-import {createDrawerNavigator, createStacknavigation, createAppContainer} from 'react-navigation';
+import {createDrawerNavigator, createStackNavigator, createAppContainer} from 'react-navigation';
 
 const DrawerNavigator = createDrawerNavigator({
     Home:{
@@ -64,7 +64,7 @@ const DrawerNavigator = createDrawerNavigator({
             title: 'Đăng ký',
             header: null,
         }
-    },
+    }
 },{
     initialRouteName: 'Home',
 });
