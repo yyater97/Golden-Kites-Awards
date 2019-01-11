@@ -66,7 +66,7 @@ const DrawerNavigator = createDrawerNavigator({
         }
     }
 },{
-    initialRouteName: 'Home',
+    initialRouteName: 'Actor',
 });
 
 export const RootNav = createAppContainer(DrawerNavigator);

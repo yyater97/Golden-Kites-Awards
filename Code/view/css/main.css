@@ -791,6 +791,11 @@ body #login-popup .close-login-popup:hover {
   -moz-animation: rotate180 1s;
   -ms-animation: rotate180 1s; }
 
+body #login-popup .title {
+  text-align: center;
+  font-size: 35px;
+  color: #E88E20; }
+
 body #login-popup .popup-content {
   padding: 2%;
   position: relative; }

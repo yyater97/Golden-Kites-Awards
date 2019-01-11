@@ -210,7 +210,7 @@ export class Actor extends Component {
                     <View style={styles.slide}>
                         <View style={styles.otherActorTag}>
                             <View style={styles.avatarOtherActor}>
-                                <Image style={[styles.image,styles.otherActorImg]} source={require('../img/actor/ngo-thanh-van.jpg')} resizeMode="stretch"/>
+                                <Image style={[styles.image,styles.otherActorImg]} source={require('../img/actor/ly-hai.jpg')} resizeMode="stretch"/>
                             </View>
                             <View style={styles.nameBlock}>
                               <Text style={[styles.name,styles.gold,styles.actorOtherName]}>LÝ HẢI</Text>
@@ -220,7 +220,7 @@ export class Actor extends Component {
                     <View style={styles.slide}>
                         <View style={styles.otherActorTag}>
                             <View style={styles.avatarOtherActor}>
-                                <Image style={[styles.image,styles.otherActorImg]} source={require('../img/actor/ly-hai.jpg')} resizeMode="stretch"/>
+                                <Image style={[styles.image,styles.otherActorImg]} source={require('../img/actor/ngo-thanh-van.jpg')} resizeMode="stretch"/>
                             </View>
                             <View style={styles.nameBlock}>
                               <Text style={[styles.name,styles.gold,styles.actorOtherName]}>NGÔ THANH VÂN</Text>
